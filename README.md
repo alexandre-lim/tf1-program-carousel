@@ -1,3 +1,7 @@
+<img width="1268" alt="tf1_interview_integration" src="https://user-images.githubusercontent.com/37420129/188679937-2bac6eab-4f07-4371-933e-d201c2bb7a73.png">
+
+
+
 # Questions sur l’implémentation
 
 ### Le code est-il prêt pour être déployé en production ?
