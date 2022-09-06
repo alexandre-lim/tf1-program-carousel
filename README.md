@@ -1,3 +1,50 @@
+# Questions sur l’implémentation
+
+### Le code est-il prêt pour être déployé en production ?
+
+Non car il manque encore beaucoup de contexte pour faire l’implémentation correctement et il faut s’assurer de la qualité du délivrable. Il manque tout d’abord les tests. Je serai parti sur la librairie React Testing Library avec comme stratégie de test celle du trophée comme préconisée par Kent C. Dodds. Il faut ensuite passer par une phase de code review et de QA. Enfin s’assurer que tout est bon au niveau de la pipeline CI/CD afin de pouvoir mettre en production.
+
+### Problématiques ou remarques sur le test ?
+
+Implémenter une maquette Figma sans discussion au préalable avec un PM, des designers et d’autres développeurs abouti rarement à ce qui est vraiment attendu. En amont, il faut une Design Review puis c’est un échange constant jusqu’à la mise en production. 
+
+Mes questions sur l’impémentation:
+
+- Qu’est-ce qu’un “programme” d’un point de vue métier ?
+- Il y a t’il un Design System en place ?
+- Le carousel sera surement une composante d’une page ou d’un écran, quelle est cette page ?
+- Quel programme charger et de quelle manière doit-on charger les programmes ? Par exemple du plus récent au plus ancien ?
+- Il n’y a pas de format mobile à la maquette ?
+- Quel est l’attendu au niveau du responsive du carousel ? Breakpoint design ou fluid design ?
+- Le texte en dessous de l’image d’un programme est-il le titre ou une courte description ?
+- Quel est le comportement voulu lors du click sur un des chevrons ? Doit-on charger une toute nouvelle liste ou faire un décalage ?
+- Il y a t’il un système de défilement automatique ?
+- Est-ce possible de ne pas avoir 6 items ?
+- Comment sont gérés les différents états des composants ? (Loading et Error)
+- Qu’en est t’il des intéractions sur les boutons cliquables ? Le hover, effet d’animation ?
+- Que se passe t-il si on click sur le bouton + ?
+- Quel niveau du WCAG doit-on respecter lors de l’implémentation de la maquette ?
+- Dans le jeu de données, il y a des images qui ne fonctionnent pas, des alt trop long ou vide. Le jeu de données est peut-être trop loin de la réalité qui peut soit créer des problèmes non existants comme un alt trop long ou sinon ne pas avoir assez confiance en ce qu’on test
+- Autre remarque: J'ai eu un peu de mal à utiliser le jeu de données et m'y retrouver dedans
+
+### Choix des technos
+
+Je suis parti sur un CRA avec TS. Puis j’ai installé graphql et apollo (première utilisation de ces libs). Je n’ai pas ressenti le besoin de plus, j’ai utilisé du CSS classique.
+
+Si je devais pousser beaucoup plus loin, je serai surement parti sur une lib CSS in JS et une librairie qui gère des problématiques d'accessibilité comme Reach UI ou Radix.
+
+Pour les tests, un Jest avec RTL + MSW.
+
+J’aurai tenté de séparer la couche graphql de mes composants pour les rendre plus flexibles.
+
+D’expérience il est souvent difficile de convaincre tout le monde sur une architecture de dossier React, je m’inspire de React bulletproof. (https://github.com/alan2207/bulletproof-react)
+
+Quelques fois l’API est en erreur car trop de requêtes: “hasura cloud limit of 60 requests/minute exceeded”.
+
+----
+----
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
