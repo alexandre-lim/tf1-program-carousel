@@ -1,0 +1,24 @@
+.program-loading {
+  text-align: center;
+}
+
+.container-program-carousel {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  gap: 24px;
+  /* overflow: hidden; */
+}
+
+.program-carousel-arrow {
+  align-self: center;
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  background-color: #313132;
+}
+
+.program-carousel-arrow > img {
+  height: 100%;
+}

@@ -1,0 +1,33 @@
+.container-program {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 14px;
+}
+
+.program-image {
+  height: 125px;
+  width: 95px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.add-program {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 34px;
+  right: 6px;
+}
+
+.add-program > img {
+  height: 100%;
+}
+
+.program-title {
+  text-align: center;
+}
